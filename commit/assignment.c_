@@ -1,0 +1,47 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
+
+int numofchar;
+void *paystack(void *thr);
+int main() {
+    int thr;
+    char inputs[50];
+    printf("How many challenges do you want to monitor? ");
+    scanf("%d", &numofchar);
+    int increment = (numofchar) * (numofchar + 1);
+   
+    for (int i = 0; i < numofchar; i++)
+    {
+        printf("What is the operation? ");
+        scanf("%99s", inputs[i]);
+    }
+   
+    for (int j = 1; j<= numofchar; j++)
+   
+    int mult = 2 * j
+    {
+        for ( int k = 0; k <= mult ; k ++)
+        {
+            thr = pthread_create(&thread_id[k], NULL, &paystack, (void*) inputs[n-1]);
+           
+        }
+    }
+    int zero = 0;
+    for(int l = 1; y <= 0; l++)
+    {
+        int a = 2 * l;
+        for(int f = 0; f <= a ; f++)
+        {
+            pthread_join(thread_id[0], NULL);
+        }
+    }
+    void * paystack(void* thr)
+    {
+        char *add = (char*) thr;
+        printf("Thread ID: %ld \t Operation: %s \n", pthread_self(), add);
+    }
+    return 0;
+}
